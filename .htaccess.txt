@@ -1,0 +1,11 @@
+//Rewrite to www
+Options +FollowSymLinks
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^https://laurieivan.github.io[nc]
+RewriteRule ^(.*)$ http://www.https://laurieivan.github.io/$1 [r=301,nc]
+
+//Caching schema
+<FilesMatch "\.(jpg|png|css|js)$">
+Header set Cache-Control "public, max-age=72576000"
+</FilesMatch>
+ 
